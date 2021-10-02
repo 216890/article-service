@@ -4,6 +4,9 @@ keycloak:
   resource: article-service
   bearer-only: true
   principal-attribute: preferred_username
+  credentials:
+    secret: ${SSO_SECRET}
+
 
 spring.data.mongodb:
   port: 27017

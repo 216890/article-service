@@ -7,4 +7,3 @@ keycloak:
   auth-server-url: http://localhost:8079/auth
   bearer-only: true
   resource: article-service
-
