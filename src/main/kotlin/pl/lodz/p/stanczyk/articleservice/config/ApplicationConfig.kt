@@ -28,10 +28,4 @@ class ApplicationConfig {
 
     @Bean
     fun instantNowSupplier(): InstantNowSupplier = InstantNowSupplierImpl()
-
-    @Bean
-    fun metricsCommonTags(@Value("spring.application.name") applicationName: String): MeterRegistryCustomizer<MeterRegistry> =
-        MeterRegistryCustomizer { registry: MeterRegistry ->
-            registry.config().commonTags("application", applicationName)
-        }
 }
